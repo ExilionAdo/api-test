@@ -12,9 +12,9 @@ const {
 
 router.post("/", createUser);
 
-router.use(tokenAuthenticate);
-
 router.post("/login", loginUser);
+
+router.use(tokenAuthenticate);
 
 router.route("/:id").get(getUser).put(updateUser).delete(deleteUser);
 
